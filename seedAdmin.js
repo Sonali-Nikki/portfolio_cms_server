@@ -63,10 +63,8 @@ export async function seedAdmin() {
       console.log(`${u.email} created successfully!`);
     }
     console.log("Seeding completed.");
-    // mongoose.connection.close();
   } catch (err) {
     console.error("Error seeding users:", err);
-    // mongoose.connection.close();
   }
 }
 

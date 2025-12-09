@@ -43,12 +43,11 @@ app.use("/uploads", express.static("uploads"));
 
 // Database connection
 connectDB();
-// Start server   
+
+
 await seedAdmin();
 
-
-
-
+// Start server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
