@@ -31,13 +31,13 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use('/api', routes);
 app.use("/api/auth", authroutes);
-app.use("/api/about", aboutRoutes);   
-app.use("/api/skills", skillRoutes);         
-app.use("/api/projects", projectRoutes);       
-app.use("/api/blogs", blogRoutes);            
-app.use("/api/experience", experienceRoutes);  
-app.use("/api/testimonials", testimonialRoutes); 
-app.use("/api/services", serviceRoutes);       
+app.use("/api/cms/about", aboutRoutes);   
+app.use("/api/cms/skills", skillRoutes);         
+app.use("/api/cms/projects", projectRoutes);       
+app.use("/api/cms/blogs", blogRoutes);            
+app.use("/api/cms/experience", experienceRoutes);  
+app.use("/api/cms/testimonials", testimonialRoutes); 
+app.use("/api/cms/services", serviceRoutes);       
 app.use("/uploads", express.static("uploads"));
 
 
