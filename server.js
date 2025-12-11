@@ -13,6 +13,7 @@ import serviceRoutes from "./src/routes/serviceRoutes.js";
 import aboutRoutes from "./src/routes/aboutRoutes.js";
 import authroutes from "./src/routes/auth.routes.js";
 import { seedAdmin } from './seedAdmin.js';
+import contactRoutes from './src/routes/contactRoutes.js';
 
 dotenv.config();
 const app = express();
@@ -39,6 +40,7 @@ app.use("/api/cms/experience", experienceRoutes);
 app.use("/api/cms/testimonials", testimonialRoutes); 
 app.use("/api/cms/services", serviceRoutes);       
 app.use("/uploads", express.static("uploads"));
+app.use('/api/contact', contactRoutes);
 
 
 // Database connection
