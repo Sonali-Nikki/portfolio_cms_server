@@ -1,13 +1,10 @@
 import express from "express";
-import { createContact, getContacts, deleteContact } from "../controllers/contactController.js";
+import { getContact, updateContact } from "../controllers/contactController.js";
+import { adminAuth } from "../middleware/adminAuth.js";
 
 const router = express.Router();
 
-// Public route — user contact form
-router.post("/", createContact);
-
-// Admin routes
-router.get("/", getContacts);
-router.delete("/:id", deleteContact);
+router.get("/", getContact);
+router.put("/", adminAuth, updateContact);
 
 export default router;

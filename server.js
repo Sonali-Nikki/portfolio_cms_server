@@ -40,7 +40,7 @@ app.use("/api/cms/experience", experienceRoutes);
 app.use("/api/cms/testimonials", testimonialRoutes); 
 app.use("/api/cms/services", serviceRoutes);       
 app.use("/uploads", express.static("uploads"));
-app.use('/api/contact', contactRoutes);
+app.use('/api/cms/contact', contactRoutes);
 
 
 // Database connection
