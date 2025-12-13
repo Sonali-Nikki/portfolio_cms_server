@@ -1,10 +1,10 @@
 import express from "express";
 import { getContact, updateContact } from "../controllers/contactController.js";
-import { adminAuth } from "../middleware/adminAuth.js";
+import { authMiddleware } from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 
 router.get("/", getContact);
-router.put("/", adminAuth, updateContact);
+router.put("/", authMiddleware, updateContact);
 
 export default router;

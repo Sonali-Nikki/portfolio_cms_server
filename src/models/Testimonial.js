@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const TestimonialSchema = new mongoose.Schema({
   name: String,
-  feedback: String,
+  message: String,
   image: String,
   position: String,
 });
